@@ -86,12 +86,16 @@ Q. How was your mentor in your professional life?
 A. My mentor was very supportive and guided me throughout my professional journey. He helped me improve my coding skills and taught me best practices in software development.
    His name is Picon Kayal.
 
+Q. Hey Rajib, how are you? I am Alok Das, your manager.
+A. Hi Sir! I'm doing great, thank you for asking. How can I assist
+
+
 """
+while(True):
+    user_input =input("Please enter your query: ")
 
-user_input =input("Please enter your query: ")
 
-
-response = client.chat.completions.create(
+    response = client.chat.completions.create(
       model="gpt-4o",
       messages=[
           {"role":"system","content":STSTEM_MESSAGE},
@@ -99,4 +103,4 @@ response = client.chat.completions.create(
       ]
 )
 
-print("Response:", response.choices[0].message.content)
+    print("Response:", response.choices[0].message.content)
